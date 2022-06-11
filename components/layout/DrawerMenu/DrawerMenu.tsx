@@ -7,7 +7,7 @@ function DrawerMenu({ className }: IClassName) {
     <div
       onClick={() => (!open ? setOpen(true) : null)}
       className={`
-      sm:max-w-[30%]
+      sm:max-w-[300px]
       max-h-[300px]
       sm:max-h-max
       w-full
