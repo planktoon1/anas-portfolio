@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useStore } from "../../../contexts";
-import { ActionTypes, ITab } from "../../../contexts/store";
+import { ActionTypes } from "../../../contexts/store";
+import { IClassName } from "../../../types/genericTypes";
 
-const Tabs = () => {
+function Tabs({ className }: IClassName) {
   const { state, dispatch } = useStore();
   const { tabs } = state;
 
@@ -24,13 +25,13 @@ const Tabs = () => {
   const router = useRouter();
 
   return (
-    <div className="min-h-[26px] bg-background-3 cursor-default divide-x-2 divide-background-3 overflow-x-auto whitespace-nowrap">
+    <div className={` bg-background-3 flex gap-x-0.5 ${className ?? ""}`}>
       {tabs.map((tab) => {
         const isActive = router.asPath === tab.path;
         return (
           <div
             key={tab.name}
-            className={`transition-all group inline-block items-center px-2 h-[26px] ${
+            className={`whitespace-nowrap transition-all group inline-block items-center px-2 h-[26px] ${
               isActive ? "bg-background-1" : "hover:bg-background-2"
             }`}
           >
@@ -60,6 +61,6 @@ const Tabs = () => {
       })}
     </div>
   );
-};
+}
 
 export default Tabs;

@@ -23,18 +23,15 @@ export function Layout({
   }, [router.asPath, dispatch]);
 
   return (
-    <div className="flex flex-col min-h-[100vh]">
-      <Header />
-      <PageToolBar />
-
-      <div className="h-8 bg-background-2 border-y border-background-3"></div>
-      <div className="flex flex-col sm:flex-row divide-y sm:divide-x divide-background-3 flex-1 min-h-0">
+    <div className="flex flex-col h-screen">
+      <Header className="shrink-0" />
+      <PageToolBar className="shrink-0 hidden sm:block" />
+      <div className="shrink-0 hidden sm:block h-8 bg-background-2 border-y border-background-3" />
+      <div className="flex-1 overflow-hidden flex flex-col sm:flex-row divide-y sm:divide-x divide-background-3">
         <DrawerMenu />
-        <div className="flex-1 min-w-0 min-h-0 max-h-full">
-          <div className="hidden sm:block">
-            <Tabs />
-          </div>
-          {pageContent}
+        <div className="flex-1 flex flex-col overflow-hidden">
+          <Tabs className="shrink-0 overflow-x-auto" />
+          <div className="flex-1 overflow-auto">{pageContent}</div>
         </div>
       </div>
     </div>

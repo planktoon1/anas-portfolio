@@ -3,12 +3,15 @@ import { useRouter } from "next/router";
 import { PropsWithChildren } from "react";
 import { UrlObject } from "url";
 import Image from "next/image";
+import { IClassName } from "../../../types/genericTypes";
 
-export interface IHeaderProps {}
+export interface IHeaderProps extends IClassName {}
 
-export function Header({}: IHeaderProps) {
+export function Header({ className }: IHeaderProps) {
   return (
-    <header className="w-full flex flex-col bg-background-3">
+    <header
+      className={`w-full flex flex-col bg-background-3 ${className ?? ""}`}
+    >
       <div className="m-1">
         <Image src="/A.png" width="18px" height="18px" alt="A" />
         <Image src="/N.png" width="18px" height="18px" alt="N" />
