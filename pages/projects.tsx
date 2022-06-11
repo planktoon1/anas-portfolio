@@ -1,0 +1,72 @@
+function Projects() {
+  return (
+    <div>
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+      Projects <br />
+    </div>
+  );
+}
+
+export default Projects;
