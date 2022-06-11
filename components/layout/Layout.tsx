@@ -20,7 +20,7 @@ export function Layout({
       dispatch({ type: ActionTypes.OpenTab, payload: path });
     };
     handlePathChange(router.asPath);
-  }, [router.asPath]);
+  }, [router.asPath, dispatch]);
 
   return (
     <div className="flex flex-col min-h-[100vh]">

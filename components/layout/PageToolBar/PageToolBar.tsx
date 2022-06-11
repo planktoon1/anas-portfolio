@@ -8,7 +8,7 @@ export function PageToolBar({}: IPageToolBarProps) {
       <figure
         style={{ width: 787, aspectRatio: "8.1979/1", marginBottom: "-2px" }}
       >
-        <Image src={mockImage} />
+        <Image src={mockImage} alt="PageToolBar" />
       </figure>
     </div>
   );
