@@ -4,18 +4,23 @@ import { PropsWithChildren } from "react";
 import { UrlObject } from "url";
 import Image from "next/image";
 import { IClassName } from "../../../types/genericTypes";
+import Overlay from "../../Overlay";
 
-export interface IHeaderProps extends IClassName {}
+export interface IHeaderProps extends IClassName { }
 
 export function Header({ className }: IHeaderProps) {
   return (
     <header
       className={`w-full flex flex-col bg-background-3 ${className ?? ""}`}
     >
-      <div className="m-1">
-        <Image src="/A.png" width="18px" height="18px" alt="A" />
-        <Image src="/N.png" width="18px" height="18px" alt="N" />
-        <Image src="/A.png" width="18px" height="18px" alt="A" />
+      <div className="flex justify-between">
+        <div className="m-1">
+
+          <Image src="/A.png" width="18px" height="18px" alt="A" />
+          <Image src="/N.png" width="18px" height="18px" alt="N" />
+          <Image src="/A.png" width="18px" height="18px" alt="A" />
+        </div>
+        <Overlay />
       </div>
       <ul className="flex pt-1 items-end flex-wrap">
         <FileButton>IDK what</FileButton>
@@ -52,9 +57,8 @@ export function NavigationButton({
         sm:w-min
         transition-colors
         duration-300
-        ${
-          isActive ? "bg-background-2" : "bg-background-3 hover:bg-background-2"
-        }
+        ${isActive ? "bg-background-2" : "bg-background-3 hover:bg-background-2"
+          }
     `}
       >
         <a>{children}</a>

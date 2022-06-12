@@ -139,3 +139,7 @@ table {
 body {
   font-family: "Inter", sans-serif;
 }
+
+.x-button:hover {
+  background-color: red;
+}
