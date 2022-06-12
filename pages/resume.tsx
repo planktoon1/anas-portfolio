@@ -1,5 +1,7 @@
+import { PageGrid } from "../components/layout/PageGrid/PageGrid";
+
 function Resume() {
-  return <div>Resume</div>;
+  return <PageGrid>Resume</PageGrid>;
 }
 
 export default Resume;

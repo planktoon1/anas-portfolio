@@ -17,7 +17,7 @@ export enum ActionTypes {
 }
 
 interface ActionPayloads {
-  [ActionTypes.OpenTab]: string; //TODO: fix
+  [ActionTypes.OpenTab]: string;
   [ActionTypes.CloseTab]: string;
   [ActionTypes.FocusTab]: string;
 }
@@ -46,9 +46,12 @@ export const reducer = (state: IState, action: IActions) => {
       }
 
       const path: string = action.payload;
-      const newTabs = [...state.tabs, { name: TABNAMES[path] || "oops", path }];
+      const newTabs = [
+        ...state.tabs,
+        { name: TABNAMES[path] || path.replace("/", ""), path },
+      ];
 
-      return { ...state, tabs: newTabs }; //TODO: fix
+      return { ...state, tabs: newTabs };
     }
     case ActionTypes.CloseTab: {
       if (state.tabs.length === 1) return state;

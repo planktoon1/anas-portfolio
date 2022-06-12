@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import { Test } from "../components/shared/Test";
+import { PageGrid } from "../components/layout/PageGrid/PageGrid";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <PageGrid>
       <Test />
       <Test />
       <Test />
@@ -66,7 +67,7 @@ const Home: NextPage = () => {
       <Test />
       <Test />
       <Test />
-    </div>
+    </PageGrid>
   );
 };
 

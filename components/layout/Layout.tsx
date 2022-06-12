@@ -16,6 +16,10 @@ export function Layout({
   const router = useRouter();
 
   useEffect(() => {
+    console.log("changed path:", router.asPath);
+
+    if (router.asPath.startsWith("/[...")) return;
+
     const handlePathChange = (path: string) => {
       dispatch({ type: ActionTypes.OpenTab, payload: path });
     };

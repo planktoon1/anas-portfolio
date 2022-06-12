@@ -1,14 +1,18 @@
 import { useRouter } from "next/router";
-import { PDPFullpage, PDPPreview } from "../../components/shared/PDFPage";
+import { ImageFullpage } from "../components/shared/ImageFullpage";
+import { PDFFullpage } from "../components/shared/PDFFullpage";
+
+const imageExtensions = /(.png)|(.jpg)$/;
 
 function ProjectsTests() {
   const { query } = useRouter();
   const { filename: _filename } = query;
   const filename = getQueryAsString(_filename);
-  console.log(filename);
 
-  if (filename.endsWith(".pdf"))
-    return <PDPFullpage url="./testpdf.pdf" title="Test 1" />;
+  // TODO: Check if file exists, if not 404
+
+  if (imageExtensions.test(filename)) return <ImageFullpage src={filename} />;
+  if (filename.endsWith(".pdf")) return <PDFFullpage url={filename} />;
 
   return <div>IDK What happened {filename}</div>;
 }
