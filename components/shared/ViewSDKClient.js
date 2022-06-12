@@ -16,7 +16,7 @@ class ViewSDKClient {
     }
     previewFile(divId, viewerConfig, url) {
         const config = {
-            clientId: "c56f4dc06bd445cb82264e10e2366790" //Enter your Client ID here
+            clientId: process.env.NEXT_PUBLIC_ADOBE_CLIENT_ID
         };
         if (divId) {
             config.divId = divId;
@@ -57,7 +57,6 @@ class ViewSDKClient {
     }
     registerSaveApiHandler() {
         const saveApiHandler = (metaData, content, options) => {
-            console.log(metaData, content, options);
             return new Promise((resolve) => {
                 setTimeout(() => {
                     const response = {
