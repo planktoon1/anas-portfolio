@@ -3,9 +3,11 @@ import { IClassName } from "../../types/genericTypes";
 
 export enum TxtVariant {
   Paragraph = "PARAGRAPH",
+  Span = "SPAN",
   H1 = "HEADER_1",
   H2 = "HEADER_2",
   H3 = "HEADER_3",
+  Anchor = "ANCHOR",
 }
 
 export interface ITxtProps extends IClassName {
@@ -43,6 +45,18 @@ export function Txt({
         <h3 className={`font-semibold col-span-4 ${className ?? ""}`}>
           {children}
         </h3>
+      );
+    case TxtVariant.Anchor:
+      return (
+        <span
+          className={`font-semibold underline text-primary ${className ?? ""}`}
+        >
+          {children}
+        </span>
+      );
+    case TxtVariant.Span:
+      return (
+        <span className={`txt-base mb-2 ${className ?? ""}`}>{children}</span>
       );
     default:
       return <p className={`txt-base mb-2 ${className ?? ""}`}>{children}</p>;
