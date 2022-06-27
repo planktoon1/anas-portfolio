@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import { useEffect, useMemo } from "react";
 import { IClassName } from "../../types/genericTypes";
 import { loadPDF } from "./PDFPreview";
@@ -6,7 +7,7 @@ export interface IPDFFullpageProps extends IClassName {
   url: string;
 }
 
-export function PDFFullpage({ url }: IPDFFullpageProps) {
+function _PDFFullpage({ url }: IPDFFullpageProps) {
   const id = useMemo(
     () => `pdf-fullpage-${Math.round(Math.random() * 1000)}`,
     []
@@ -20,3 +21,7 @@ export function PDFFullpage({ url }: IPDFFullpageProps) {
 
   return <div id={id} style={{ height: "100%" }} />;
 }
+
+export const PDFFullpage = dynamic(() => Promise.resolve(_PDFFullpage), {
+  ssr: false,
+});

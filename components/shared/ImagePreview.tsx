@@ -9,14 +9,14 @@ export interface IImagePreviewProps extends IClassName {
 
 export function ImagePreview({ title, src, className }: IImagePreviewProps) {
   return (
-    <figure className={`relative group ${className ?? ""}`}>
+    <figure className={`relative h-fit group ${className ?? ""}`}>
       <img className="min-w-full h-auto " src={src} alt="Image couldn't load" />
       <div
         className={`
         absolute 
         inset-0 
         opacity-0 
-        bg-black 
+        bg-black
         z-10 
         group-hover:opacity-70 
         pointer-events-none
@@ -29,7 +29,7 @@ export function ImagePreview({ title, src, className }: IImagePreviewProps) {
         `}
       >
         <div className="flex justify-end">
-          <Link href={src}>
+          <Link href={`/file/?n=${src}`}>
             <a
               title="Open in new tab"
               className="text-white flex justify-between"

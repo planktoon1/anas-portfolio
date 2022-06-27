@@ -11,15 +11,15 @@ const Home: NextPage = () => {
   const { t } = useTranslation();
 
   return (
-    <PageGrid className="my-0">
+    <PageGrid className="!my-0 !pt-0">
       <div className="relative h-64 col-span-4 -mx-4">
         <Image
-          src="/bannerpicture.jpg"
+          src="/landingbanner.png"
           alt="Profile banner picture"
           layout="fill"
           objectFit="cover"
         />
-        <div className="bg-gradient-to-tr from-text-primary absolute inset-0" />
+        <div className="bg-gradient-to-tr from-background-1 absolute inset-0" />
         <div className="absolute inset-0 p-4 flex justify-end flex-col">
           <Txt variant={TxtVariant.H1} className="text-text">
             {t("about.bannerTitle")}

@@ -1,8 +1,33 @@
-import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { IClassName } from "../../../types/genericTypes";
 
 function DrawerMenu({ className }: IClassName) {
-  const [open, setOpen] = useState(true);
+  const router = useRouter();
+  useEffect(() => {
+    if (window.innerWidth > 639 && router.pathname.startsWith("/projects")) {
+      setOpen(true);
+    }
+  }, [router.pathname]);
+
+  const [open, setOpen] = useState(false);
+
+  const projects = [
+    {
+      url: "/projects/first-semester",
+      name: "First semester",
+    },
+    {
+      url: "/projects/second-semester",
+      name: "Second semester",
+    },
+    {
+      url: "/projects/third-semester",
+      name: "Third semester",
+    },
+  ];
+
   return (
     <div
       onClick={() => (!open ? setOpen(true) : null)}
@@ -49,11 +74,22 @@ function DrawerMenu({ className }: IClassName) {
       </div>
       <div
         className={`flex-1 bg-background-1 p-2  ${
-          open ? "opacity-100" : "hidden opacity-0 "
+          open ? "opacity-100" : "hidden opacity-0"
         }`}
       >
-        hover asdasd asd as das d<aside>as dsa d</aside>
-        {/* TODO: CRAZY COOL CONTENT GOES HERE */}
+        <ul className="flex flex-col gap-2">
+          {projects.map((project, i) => (
+            <li key={`project_link_${i}_${project.url}`}>
+              <span
+                className={`hover:!underline ${
+                  project.url === router.asPath ? "font-bold" : ""
+                }`}
+              >
+                <Link href={project.url}>{project.name}</Link>
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

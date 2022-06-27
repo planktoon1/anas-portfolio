@@ -1,23 +1,22 @@
-import { PropsWithChildren } from "react";
-import { PageGrid } from "../components/layout/PageGrid/PageGrid";
-import { ImagePreview } from "../components/shared/ImagePreview";
-import { PDFPreview } from "../components/shared/PDFPreview";
-import { Txt, TxtVariant } from "../components/shared/Text";
+import { PageGrid } from "../../components/layout/PageGrid/PageGrid";
+import { ImagePreview } from "../../components/shared/ImagePreview";
+import { PDFPreview } from "../../components/shared/PDFPreview";
+import { Txt, TxtVariant } from "../../components/shared/Text";
 
-function Projects() {
+function ProjectsExample() {
   return (
     <PageGrid>
       <ImagePreview
         src="/A.png"
-        title="This is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an A"
+        title="This is an AThis is an AThis is an AT"
       />
       <ImagePreview
         src="/N.png"
-        title="This is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an A"
+        title="This is an AThis is an AThis is an AT"
       />
       <ImagePreview
         src="/A.png"
-        title="This is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an AThis is an A"
+        title="This is an AThis is an AThis is an AT"
       />
       <Txt variant={TxtVariant.H1}>Projects</Txt>
       <Txt className="col-span-4">
@@ -47,12 +46,12 @@ function Projects() {
       </Txt>
       <PDFPreview
         className="col-span-4 md:col-span-2"
-        url="./testpdf.pdf"
+        url="../testpdf.pdf"
         title="Stuff"
       />
       <PDFPreview
         className="col-span-4 md:col-span-2"
-        url="./testpdf.pdf"
+        url="../testpdf.pdf"
         title="Other stuff"
       />
       <br />
@@ -66,7 +65,7 @@ function Projects() {
       <PDFPreview
         height={500}
         className="col-span-4 md:col-span-3"
-        url="./testpdf.pdf"
+        url="../testpdf.pdf"
         title="Stuff"
       />
       <Txt className="col-span-4 md:col-span-1 row-span-2">
@@ -82,4 +81,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ProjectsExample;

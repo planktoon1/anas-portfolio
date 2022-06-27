@@ -6,11 +6,13 @@ const imageExtensions = /(.png)|(.jpg)$/;
 
 function ProjectsTests() {
   const { query } = useRouter();
-  const { filename: _filename } = query;
-  const filename = getQueryAsString(_filename);
+  // const { filename: _filename } = query;
+  const filename = query.n as string;
+
+  // const filename = getQueryAsString(_filename);
 
   // TODO: Check if file exists, if not 404
-
+  if (!filename) return <div>IDK What happened {filename}</div>;
   if (imageExtensions.test(filename)) return <ImageFullpage src={filename} />;
   if (filename.endsWith(".pdf")) return <PDFFullpage url={filename} />;
 

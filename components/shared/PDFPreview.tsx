@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic.js";
 import Link from "next/link.js";
 import { useEffect, useMemo } from "react";
 import { IClassName } from "../../types/genericTypes.js";
@@ -6,15 +7,17 @@ import ViewSDKClient from "./ViewSDKClient.js";
 
 interface IPDFPreviewProps extends IClassName {
   title: string;
+  smallTitle?: boolean;
   url: string;
   /** Default - 320px */
   height?: number;
 }
 
-export function PDFPreview({
+function _PDFPreview({
   url,
   title,
   height = 320,
+  smallTitle = false,
   className,
 }: IPDFPreviewProps) {
   const id = useMemo(() => `id-${Math.round(Math.random() * 1000)}`, []);
@@ -29,13 +32,18 @@ export function PDFPreview({
   }, [id, url, title]);
 
   return (
-    <div className={`w-full ${className ?? ""}`}>
-      <Link href={`/${url}`}>
+    <div className={`w-full  ${className ?? ""} ${smallTitle ? "-mt-7" : ""}`}>
+      <Link href={`/file/?n=${url}`}>
         <a
           title="Open in new tab"
           className="w-full relative flex items-center justify-between"
         >
-          <Txt variant={TxtVariant.H3}>{title}</Txt>
+          <Txt
+            variant={TxtVariant.H3}
+            className={`font-thin ${smallTitle ? "opacity-50" : "opacity-80"}`}
+          >
+            {title}
+          </Txt>
           <div className=" text-xl">🗖</div>
         </a>
       </Link>
@@ -52,3 +60,7 @@ export function loadPDF(containerId: string, url: string, config: any) {
     viewSDKClient.previewFile(containerId, config, url);
   });
 }
+
+export const PDFPreview = dynamic(() => Promise.resolve(_PDFPreview), {
+  ssr: false,
+});

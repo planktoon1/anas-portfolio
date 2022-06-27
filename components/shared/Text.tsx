@@ -8,6 +8,7 @@ export enum TxtVariant {
   H2 = "HEADER_2",
   H3 = "HEADER_3",
   Anchor = "ANCHOR",
+  Quote = "Quote",
 }
 
 export interface ITxtProps extends IClassName {
@@ -53,6 +54,14 @@ export function Txt({
         >
           {children}
         </span>
+      );
+    case TxtVariant.Quote:
+      return (
+        <p
+          className={`font-thin text-2xl italic text-text  ${className ?? ""}`}
+        >
+          {`${children}`}
+        </p>
       );
     case TxtVariant.Span:
       return (

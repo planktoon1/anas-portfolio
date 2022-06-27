@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import TABNAMES from "./tabNames";
 
 export interface IState {
   test: string;
@@ -23,14 +23,6 @@ interface ActionPayloads {
 }
 export type IActions =
   ActionMap<ActionPayloads>[keyof ActionMap<ActionPayloads>];
-
-const TABNAMES: Record<string, string> = {
-  "/": "About",
-  "/projects": "Projects",
-  "/contact": "Contact me",
-  "/resume": "Resume",
-  "/skills": "Skills",
-};
 
 export const initialState: IState = {
   test: "dumb dumb",
