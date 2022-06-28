@@ -17,10 +17,12 @@ function DrawerMenu({ className }: IClassName) {
     {
       url: "/projects/first-semester",
       name: "First semester",
+      disabled: true,
     },
     {
       url: "/projects/second-semester",
       name: "Second semester",
+      disabled: true,
     },
     {
       url: "/projects/third-semester",
@@ -45,7 +47,7 @@ function DrawerMenu({ className }: IClassName) {
       bg-background-2
       ${
         open
-          ? "min-h-[300px] min-w-[180px]"
+          ? "min-h-[140px] min-w-[180px]"
           : "sm:w-[26px] hover:sm:bg-background-3 hover:cursor-pointer"
       }
       ${className ?? ""}
@@ -69,7 +71,7 @@ function DrawerMenu({ className }: IClassName) {
             open ? "" : "sm:hidden"
           } max-w-[calc(100% - 16px)]`}
         >
-          Portfolio browser
+          Project browser
         </p>
       </div>
       <div
@@ -81,11 +83,14 @@ function DrawerMenu({ className }: IClassName) {
           {projects.map((project, i) => (
             <li key={`project_link_${i}_${project.url}`}>
               <span
-                className={`hover:!underline ${
-                  project.url === router.asPath ? "font-bold" : ""
-                }`}
+                className={`${
+                  project.disabled ? "text-gray-500 cursor-default" : ""
+                } ${project.url === router.asPath ? "font-bold" : ""}`}
               >
-                <Link href={project.url}>{project.name}</Link>
+                {project.disabled && project.name}
+                {!project.disabled && (
+                  <Link href={project.url}>{project.name}</Link>
+                )}
               </span>
             </li>
           ))}

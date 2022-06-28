@@ -22,14 +22,17 @@ function ThirdSemesterProject() {
       <Txt variant={TxtVariant.H2} className="!-mt-2">
         Prefabrication and Industry
       </Txt>
-      <Txt className="col-span-4 mt-">
-        INTRODUCTION INTRODUCTION INTRODUCTION Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Recusandae, mollitia odit? Sequi illo
-        inventore voluptatum aliquid accusamus corrupti ducimus veritatis
-        repellat libero veniam. Nobis commodi dolor ipsa. Optio, quisquam
-        nostrum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea
-        autem sint INTRODUCTION INTRODUCTION INTRODUCTION
-      </Txt>
+      <div className="col-span-4">
+        <Txt>
+          Throughout the 3d semester of my ATCM study I have worked with
+          prefabrication and industry.
+        </Txt>
+        <Txt>
+          Here I focused on concrete sandwich elements and wooden elements,
+          keeping in mind that the more mass production of building components
+          the better.
+        </Txt>
+      </div>
       <Txt variant={TxtVariant.H2} className="mt-8">
         Outline Proposal
       </Txt>
@@ -75,7 +78,7 @@ function ThirdSemesterProject() {
           concrete components.
         </Txt>
       </div>
-      <div className="col-span-2 flex flex-col">
+      <div className="col-span-4 lg:col-span-2 flex flex-col">
         <Txt variant={TxtVariant.Quote} className="my-8">
           “How to connect a component to another and what is the best solution
           we can have in this specific case?”
@@ -88,23 +91,37 @@ function ThirdSemesterProject() {
           working with.
         </Txt>
       </div>
-      <div className="col-span-2 ">
+      <div className="col-span-4 lg:col-span-2">
         <PDFPreview
           height={400}
           url="/pp_details.pdf"
           title="Project proposal details"
         />
       </div>
-      <Txt variant={TxtVariant.H3}>Project Proposal documents</Txt>
-      <PDFPreview height={230} url="/pp_elevations.pdf" title="Elevations" />
+      <Txt variant={TxtVariant.H3} className="mt-4">
+        Project Proposal documents
+      </Txt>
       <PDFPreview
         height={230}
+        url="/pp_elevations.pdf"
+        title="Elevations"
+        className="col-span-2 lg:col-span-1"
+      />
+      <PDFPreview
+        height={230}
+        className="col-span-2 lg:col-span-1"
         url="/pp_deck_element_plan.pdf"
         title="Deck Element Plan"
       />
-      <PDFPreview height={230} url="/pp_water_plans.pdf" title="Water Plans" />
       <PDFPreview
         height={230}
+        className="col-span-2 lg:col-span-1"
+        url="/pp_water_plans.pdf"
+        title="Water Plans"
+      />
+      <PDFPreview
+        height={230}
+        className="col-span-2 lg:col-span-1"
         url="/pp_time_schedule.pdf"
         title="Time Schedule MS Project"
       />
@@ -121,31 +138,64 @@ function ThirdSemesterProject() {
           className="max-w-[400px] mx-auto"
           height={500}
           url="/pp_building_permit_app.pdf"
-          title="Building permit applicaation"
+          title="Building permit application"
         />
       </div>
       <br />
-      <Txt variant={TxtVariant.H2}>Tender Project</Txt>
-      <Txt className="col-span-4">
-        This phase was all about the exchange between our documents and Århus
-        students’ documents. Here we were no longer acting as a design office,
-        but as a mounting company. We sent our invitations letters for the bids
-        and we got the same from Århus. From now on we started working on Århus’
-        project instead of the one we started the semester with.
+      <Txt variant={TxtVariant.H2} className="mb-6">
+        Tender Project
       </Txt>
+      <PDFPreview
+        smallTitle
+        className="col-span-4 lg:col-span-2"
+        height={600}
+        url="/t_Tender_Letter.pdf"
+        title="Tender letter"
+      />
+      <div className="col-span-4 lg:col-span-2 flex flex-col">
+        <Txt>
+          This phase was all about the exchange between our documents and Århus
+          students’ documents. Here we were no longer acting as a design office,
+          but as a mounting company.
+        </Txt>
+        <Txt>
+          We sent our invitations letters for the bids and we got the same from
+          Århus. From now on we started working on Århus’ project instead of the
+          one we started the semester with.
+        </Txt>
+        <PDFPreview
+          url="/t_Bid_Lists.pdf"
+          title="Tender bid list"
+          className="mt-4"
+          height={444}
+        />
+      </div>
       <br />
       <Txt variant={TxtVariant.H2}>Production Phase</Txt>
-      <Txt className="col-span-4">
-        After scrutinizing the documents received from Århus campus, we each
-        decided on a concrete element we would like to produce. Here we were
-        acting as a production company. The entirety of this phase was regarding
-        the production of the element of our choice. Here we worked with 3D
-        modeling from start to finish and we went deep into how to produce a
-        concrete element, what to add to it, which are the steps from formwork
-        to finished element. We also spent time doing a plan for insulation cut
-        in order to minimize waste. All the information we learned during this
-        phase and all the documentation produced were assembled onto a booklet.
-      </Txt>
+      <div className="col-span-4 lg:col-span-2 mb-6 lg:mb-2">
+        <Txt>
+          After scrutinizing the documents received from Århus campus, we each
+          decided on a concrete element we would like to produce.
+        </Txt>
+        <Txt>
+          Here we were acting as a production company. The entirety of this
+          phase was regarding the production of the element of our choice. Here
+          we worked with 3D modeling from start to finish and we went deep into
+          how to produce a concrete element, what to add to it, which are the
+          steps from formwork to finished element.
+        </Txt>
+        <Txt>
+          We also spent time doing a plan for insulation cut in order to
+          minimize waste. All the information we learned during this phase and
+          all the documentation produced were assembled onto a booklet.
+        </Txt>
+      </div>
+      <PDFPreview
+        smallTitle
+        className="col-span-4 lg:col-span-2"
+        url="/p_Manufacturing_booklet.pdf"
+        title="Manufacturing booklet"
+      />
       <br />
       <Txt variant={TxtVariant.H2}>Construction phase</Txt>
       <Txt className="col-span-4">
@@ -156,6 +206,18 @@ function ThirdSemesterProject() {
         elements, temporary bracing and we calculated the price for production
         and mounting.
       </Txt>
+      <PDFPreview
+        height={500}
+        className="col-span-4 lg:col-span-2"
+        url="/c_ErectionPlan.pdf"
+        title="Erection plan"
+      />
+      <PDFPreview
+        height={500}
+        className="col-span-4 lg:col-span-2"
+        url="/c_Mounting_delivery_schedule.pdf"
+        title="Mounting delivery schedule"
+      />
     </PageGrid>
   );
 }

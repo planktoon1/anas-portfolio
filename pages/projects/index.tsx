@@ -14,25 +14,40 @@ function Projects() {
         them to see all the details of the work.
       </Txt>
       <br />
-      <Txt variant={TxtVariant.H2}>
-        <Link href={"/projects/third-semester"}>
-          <a className="">Third Semester Project</a>
-        </Link>
-      </Txt>
-      <div className="col-span-2">
-        <ImagePreview
-          src="rendering_above.jpg"
-          title="Rendering of third semester project"
-        />
-      </div>
-      <div className="col-span-2">
-        <Txt>
-          In this project we had to do this and then that. Lorem ipsum dolor sit
-          amet, consectetur adipisicing elit. Consectetur enim aliquid nobis
-          nemo nesciunt fugit accusamus
+      <div className="relative shadow-lg col-span-4 grid gap-4 p-4 border border-opacity-40">
+        <div className="absolute top-2 text-text right-4 text-3xl">
+          <Link href={"/projects/third-semester"}>
+            <a title="Open in new tab">🗖</a>
+          </Link>
+        </div>
+        <Txt variant={TxtVariant.H2}>
+          <Link href={"/projects/third-semester"}>
+            <a>Third Semester Project</a>
+          </Link>
         </Txt>
-        <br />
-        <Txt>Many learnings later here we are. This was great.</Txt>
+        <div className="col-span-2">
+          <ImagePreview
+            src="rendering_above.jpg"
+            title="Rendering of third semester project"
+          />
+        </div>
+        <div className="col-span-2 flex flex-col">
+          <Txt>
+            Throughout the 3d semester of my ATCM study I have worked with
+            prefabrication and industry.
+          </Txt>
+          <Txt>
+            Here I focused on concrete sandwich elements and wooden elements,
+            keeping in mind that the more mass production of building components
+            the better.
+          </Txt>
+          <br />
+          <Txt>
+            <Link href={"/projects/third-semester"}>
+              <a>Expand this to see overview of this project</a>
+            </Link>
+          </Txt>
+        </div>
       </div>
     </PageGrid>
   );

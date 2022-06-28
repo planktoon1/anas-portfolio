@@ -12,11 +12,11 @@ function ProjectsTests() {
   // const filename = getQueryAsString(_filename);
 
   // TODO: Check if file exists, if not 404
-  if (!filename) return <div>IDK What happened {filename}</div>;
+  if (!filename) return <div>🐸 This page does not exist</div>;
   if (imageExtensions.test(filename)) return <ImageFullpage src={filename} />;
   if (filename.endsWith(".pdf")) return <PDFFullpage url={filename} />;
 
-  return <div>IDK What happened {filename}</div>;
+  return <div>🐸 This page does not exist yet </div>;
 }
 
 export default ProjectsTests;
