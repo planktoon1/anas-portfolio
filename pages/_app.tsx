@@ -39,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Store>
       <Head>
         <title>{pageTitle}</title>
+        <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
       <LanguageProvider>
         <Script src="https://documentcloud.adobe.com/view-sdk/main.js" />
