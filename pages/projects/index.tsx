@@ -28,7 +28,7 @@ function Projects() {
         <div className="col-span-2">
           <ImagePreview
             src="/fourth-semester/s4_hero.png"
-            title="Rendering of third semester project"
+            title="Forth semester project"
           />
         </div>
         <div className="col-span-2 flex flex-col">
@@ -104,7 +104,7 @@ function Projects() {
         <div className="max-w-[440px]">
           <ImagePreview
             src="second-semester/s2_hero.jpg"
-            title="Rendering of third semester project"
+            title="Rendering of second semester project"
           />
         </div>
         <div className="col-span-2 flex flex-col">
@@ -130,7 +130,7 @@ function Projects() {
         <div className="max-w-[440px]">
           <ImagePreview
             src="first-semester/s1_hero.png"
-            title="Rendering of third semester project"
+            title="Rendering of first semester project"
           />
         </div>
         <div className="flex flex-col">

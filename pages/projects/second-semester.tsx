@@ -46,14 +46,26 @@ function ThirdSemesterProject() {
           url="/second-semester/s2_details.pdf"
         />
       </div>
-      <Txt variant={TxtVariant.H2} className="mt-12">
-        Cross section
-      </Txt>
-      <div className="col-span-4">
+      <div className="col-span-4 lg:col-span-2 mb-6 lg:mb-2">
+        <Txt variant={TxtVariant.H2} className="mt-12">
+          Cross section
+        </Txt>
+        <div className="col-span-4">
+          <PDFPreview
+            smallTitle
+            className="col-span-4 lg:col-span-2"
+            url="/second-semester/s2_section.pdf"
+          />
+        </div>
+      </div>
+      <div className="col-span-4 lg:col-span-2 mb-6 lg:mb-2">
+        <Txt variant={TxtVariant.H2} className="mt-12">
+          Elevations
+        </Txt>
         <PDFPreview
-          className="max-w-[400px] mx-auto"
-          height={500}
-          url="/second-semester/s2_section.pdf"
+          smallTitle
+          className="col-span-4 lg:col-span-2"
+          url="/second-semester/s2_elevations.pdf"
         />
       </div>
     </PageGrid>

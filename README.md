@@ -14,14 +14,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## TODO
 
-Prio1
-
-- Add content
-  - Missing content from Ana: Skills, Resume
-- Portfolio browser
-
 Prio2
 
+- Fix query params showing up as new tab
 - Scroll restoration
 - Switch between danish/english button(missing danish content)
 - Toolbar
