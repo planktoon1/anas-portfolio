@@ -4,6 +4,7 @@ const TABNAMES: Record<string, string> = {
   "/projects/first-semester": "First semester",
   "/projects/second-semester": "Second semester",
   "/projects/third-semester": "Third semester",
+  "/projects/fourth-semester": "Fourth semester",
   "/contact": "Contact me",
   "/resume": "Resume",
   "/skills": "Skills",

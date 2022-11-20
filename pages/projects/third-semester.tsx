@@ -103,8 +103,8 @@ function ThirdSemesterProject() {
       </Txt>
       <PDFPreview
         height={230}
-        url="/pp_elevations.pdf"
-        title="Elevations"
+        url="/s3_firstfloor_plan.pdf"
+        title="First floor plan"
         className="col-span-2 lg:col-span-1"
       />
       <PDFPreview

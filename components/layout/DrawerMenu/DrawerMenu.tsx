@@ -17,16 +17,18 @@ function DrawerMenu({ className }: IClassName) {
     {
       url: "/projects/first-semester",
       name: "First semester",
-      disabled: true,
     },
     {
       url: "/projects/second-semester",
       name: "Second semester",
-      disabled: true,
     },
     {
       url: "/projects/third-semester",
       name: "Third semester",
+    },
+    {
+      url: "/projects/fourth-semester",
+      name: "Fourth semester",
     },
   ];
 

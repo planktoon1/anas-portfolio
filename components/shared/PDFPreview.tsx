@@ -6,7 +6,7 @@ import { Txt, TxtVariant } from "./Text";
 import ViewSDKClient from "./ViewSDKClient.js";
 
 interface IPDFPreviewProps extends IClassName {
-  title: string;
+  title?: string;
   smallTitle?: boolean;
   url: string;
   /** Default - 320px */
@@ -42,9 +42,9 @@ function _PDFPreview({
             variant={TxtVariant.H3}
             className={`font-thin ${smallTitle ? "opacity-50" : "opacity-80"}`}
           >
-            {title}
+            {title && title}
           </Txt>
-          <div className=" text-xl">🗖</div>
+          <div className="text-xl">🗖</div>
         </a>
       </Link>
       <div style={{ height }} className="w-full min-h-0 overflow-auto border">

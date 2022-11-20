@@ -25,8 +25,7 @@ export function Header({ className }: IHeaderProps) {
         <FileButton href="/">About</FileButton>
         <NavigationButton href="/projects">Projects</NavigationButton>
         <NavigationButton href="/contact">Contact me</NavigationButton>
-        <NavigationButton href="/skills">Skills</NavigationButton>
-        <NavigationButton href="/resume">Resume</NavigationButton>
+        <NavigationButton href="/resume">CV</NavigationButton>
       </ul>
     </header>
   );
