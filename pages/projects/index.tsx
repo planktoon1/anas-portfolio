@@ -49,7 +49,7 @@ function Projects() {
             basics of AutoCad.
           </Txt>
           <Txt className="mt-8">
-            <Link href={"/projects/fourth-second"}>
+            <Link href={"/projects/fourth-semester"}>
               <a>Expand this to see overview of this project</a>
             </Link>
           </Txt>

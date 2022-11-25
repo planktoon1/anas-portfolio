@@ -89,7 +89,7 @@ function ThirdSemesterProject() {
           url="/fourth-semester/s4_building_services_documentation.pdf"
         />
       </div>
-      <div className="col-span-4 mb-12">
+      <div className="col-span-4 lg:col-span-2 mb-12">
         <Txt variant={TxtVariant.H3}>Plans</Txt>
         <Txt>
           Groundfloor plan; <br />
@@ -99,6 +99,18 @@ function ThirdSemesterProject() {
           className="mx-auto"
           height={500}
           url="/fourth-semester/s4_plans.pdf"
+        />
+      </div>
+      <div className="col-span-4 lg:col-span-2 mb-12">
+        <Txt variant={TxtVariant.H3}>South Elevation</Txt>
+        <Txt>
+          <br />
+          <br />
+        </Txt>
+        <PDFPreview
+          className="mx-auto"
+          height={500}
+          url="/fourth-semester/s4_south_elevation.pdf"
         />
       </div>
     </PageGrid>
