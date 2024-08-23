@@ -62,7 +62,7 @@ function SixthSemesterProject() {
 
         <div className="col-span-4 mt-10">
           <PDFPreview
-            className="max-w-[600px] mx-auto"
+            className="max-w-[900px] mx-auto"
             height={750}
             url="/s6_intern_work_examples.pdf"
             title="Internship documents"

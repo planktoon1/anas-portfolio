@@ -66,7 +66,7 @@ function FifthSemesterProject() {
 
         <div className="col-span-4 mt-10">
           <PDFPreview
-            className="max-w-[600px] mx-auto"
+            className="max-w-[700px] mx-auto"
             height={750}
             url="/s5_pathology_report.pdf"
             title="Construction Pathology and Rehabilitation report"
