@@ -11,7 +11,7 @@ function DrawerMenu({ className }: IClassName) {
     }
   }, [router.pathname]);
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const projects = [
     {
@@ -32,6 +32,21 @@ function DrawerMenu({ className }: IClassName) {
     {
       url: "/projects/fourth-semester",
       name: "Fourth semester",
+      disabled: false,
+    },
+    {
+      url: "/projects/fifth-semester",
+      name: "Fifth semester",
+      disabled: false,
+    },
+    {
+      url: "/projects/sixth-semester",
+      name: "Sixth semester",
+      disabled: false,
+    },
+    {
+      url: "/projects/seventh-semester",
+      name: "Seventh semester",
       disabled: false,
     },
   ];

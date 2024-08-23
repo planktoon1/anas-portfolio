@@ -16,7 +16,7 @@ export const danishDictionary: IDictionary = {
     bannerTitle: "Ana Luisa Araújo",
     bannerSubtitle: "Bygningskonstruktør",
     intro:
-      "Jeg er en Bygningskonstruktør studerende. Jeg nyder denne karriere og at møde nye udfordringer undervejs. Jeg ville betragte mig selv som en kreativ person, en god problemløser og fremragende planlægger.",
+      "Jeg er en Bygningskonstruktør. Jeg nyder denne karriere og at møde nye udfordringer undervejs. Jeg ville betragte mig selv som en kreativ person, en god problemløser og fremragende planlægger.",
     checkoutMyWork: "Du kan se hvad jeg har arbejdet på",
     conctactMe:
       "og hvis du er interreseret i at kontakte mig kan du se mine kontakt detaljer",

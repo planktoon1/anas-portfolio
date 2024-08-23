@@ -16,6 +16,121 @@ function Projects() {
       <br />
       <div className="relative shadow-lg col-span-4 grid gap-4 p-4 border border-opacity-40">
         <div className="absolute top-2 text-text right-4 text-3xl">
+          <Link href={"/projects/seventh-semester"}>
+            <a title="Open in new tab">🗖</a>
+          </Link>
+        </div>
+        <Txt variant={TxtVariant.H2}>
+          <Link href={"/projects/seventh-semester"}>
+            <a>Seventh Semester Project</a>
+          </Link>
+        </Txt>
+        <div className="col-span-2">
+          <ImagePreview
+            src="/seventh-semester/s7_rendering.png"
+            title="Daycare centre rendering"
+          />
+        </div>
+        <div className="col-span-2 flex flex-col">
+          <Txt variant={TxtVariant.H3}>Daycare Centre</Txt>
+          <Txt>
+            For my 7th semester bachelor project, I collaborated with a
+            classmate to develop a daycare centre based on an initial outline
+            provided by AART Architects. Our project presented a significant
+            degree of difficulty, particularly in addressing the buildability
+            aspects of the long overhang terrace and roof.
+          </Txt>
+          <br />
+          <Txt>
+            Our focus was on the integration of steel structures, with a
+            particular emphasis on the connections between concrete and steel
+            elements.
+          </Txt>
+          <Txt className="mt-8">
+            <Link href={"/projects/seventh-semester"}>
+              <a>Expand this to see overview of this project</a>
+            </Link>
+          </Txt>
+        </div>
+      </div>
+      <div className="relative shadow-lg col-span-4 grid gap-4 p-4 border border-opacity-40">
+        <div className="absolute top-2 text-text right-4 text-3xl">
+          <Link href={"/projects/sixth-semester"}>
+            <a title="Open in new tab">🗖</a>
+          </Link>
+        </div>
+        <Txt variant={TxtVariant.H2}>
+          <Link href={"/projects/sixth-semester"}>
+            <a>Sixth Semester Project</a>
+          </Link>
+        </Txt>
+        <div className="col-span-2">
+          <ImagePreview src="s6_disponering.png" title="Travbyen project" />
+        </div>
+        <div className="col-span-2 flex flex-col">
+          <Txt variant={TxtVariant.H3}>
+            Travbyen Billund - A sustainable urban development
+          </Txt>
+          <Txt>
+            During my 20-week internship internship semester I had the
+            opportunity to work on the Travbyen Project, a wooden construction
+            development. My focus throughout this experience was on deepening my
+            knowledge of wooden constructions while actively contributing to
+            various aspects of the project.
+          </Txt>
+          <br />
+          <Txt>
+            I was responsible for 3D modelling buildings and creating detailed
+            families for windows and doors. I also played a key role in solving
+            technical challenges, such as developing precise sokkel details. And
+            more..
+          </Txt>
+          <Txt className="mt-8">
+            <Link href={"/projects/sixth-semester"}>
+              <a>Expand this to see overview of this project</a>
+            </Link>
+          </Txt>
+        </div>
+      </div>
+      <div className="relative shadow-lg col-span-4 grid gap-4 p-4 border border-opacity-40">
+        <div className="absolute top-2 text-text right-4 text-3xl">
+          <Link href={"/projects/fifth-semester"}>
+            <a title="Open in new tab">🗖</a>
+          </Link>
+        </div>
+        <Txt variant={TxtVariant.H2}>
+          <Link href={"/projects/fifth-semester"}>
+            <a>Fifth Semester Project</a>
+          </Link>
+        </Txt>
+        <div className="col-span-2">
+          <ImagePreview
+            src="/ist_tecnico_lisboa.jpg"
+            title="ERASMUS at IST Lisboa"
+          />
+        </div>
+        <div className="col-span-2 flex flex-col">
+          <Txt variant={TxtVariant.H3}>ERASMUS program in Lisbon, Portugal</Txt>
+          <Txt>
+            During my 5th semester, I participated in the ERASMUS program at
+            Instituto Técnico Superior in Lisbon, Portugal, pursuing an
+            Integrated Master’s in Architecture.
+          </Txt>
+          <br />
+          <Txt>
+            This international exposure enriched my architectural perspective
+            and introduced me to new methodologies and insights from various
+            professionals.
+          </Txt>
+          <Txt className="mt-8">
+            <Link href={"/projects/fifth-semester"}>
+              <a>Expand this to see overview of this semester</a>
+            </Link>
+          </Txt>
+        </div>
+      </div>
+      <div className="relative shadow-lg col-span-4 grid gap-4 p-4 border border-opacity-40">
+        <div className="absolute top-2 text-text right-4 text-3xl">
           <Link href={"/projects/fourth-semester"}>
             <a title="Open in new tab">🗖</a>
           </Link>
