@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const { t } = useTranslation();
 
   return (
-    <PageGrid className="!my-0 !pt-0">
+    <PageGrid className="!my-0 !mt-16">
       <div className="relative h-64 col-span-4 -mx-4">
         <Image
           src="/landingbanner.png"
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           </Txt>
         </div>
       </div>
-      <Txt variant={TxtVariant.H2} className="mt-8">
+      <Txt variant={TxtVariant.H2} className="mt-8 mb-4">
         {t("Hello")}!
       </Txt>
       <Txt className="col-span-4">{t("about.intro")}</Txt>
@@ -48,6 +48,20 @@ const Home: NextPage = () => {
         </Link>
         .
       </Txt>
+      <div className="relative col-span-4">
+        <Txt className="mt-4">
+          Originally from Brazil, I have lived in 4 different countries so far
+          and the experience I have gained and still do is unexchangable. I like
+          to think of myself as a carismatic and warm problem solver and leader.
+          I thrive in problematic situations where I am put in control in order
+          to find a solution.
+        </Txt>
+        <Txt className="mt-4">
+          I flourish the most in instances where I can use my planning and
+          docummentation skills to bring order and clear goals to the work that
+          should be done.
+        </Txt>
+      </div>
     </PageGrid>
   );
 };

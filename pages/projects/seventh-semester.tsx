@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { PageGrid } from "../../components/layout/PageGrid/PageGrid";
 import { ImagePreview } from "../../components/shared/ImagePreview";
+import { PDFPreview } from "../../components/shared/PDFPreview";
 import { Txt, TxtVariant } from "../../components/shared/Text";
 
 function SeventhSemesterProject() {
@@ -37,11 +38,55 @@ function SeventhSemesterProject() {
         </Txt>
         <br />
         <Txt>
-          Here you can find an overview of the documents worked on in the
-          variety of areas such as Building and structural design and building
-          services.
+          The project was thoroughly worked through 3 different phases during
+          this semester: Outline Proposal, Project Proposal and Tender Phase.
+          Here you can find an overview of the finished documents worked on in
+          the variety of areas such as Building and structural design and
+          building services.
         </Txt>
         <br />
+      </div>
+      <div className="col-span-4 lg:col-span-2 mb-6 lg:mb-2">
+        <Txt variant={TxtVariant.H2} className="mt-8">
+          Building services
+        </Txt>
+        <PDFPreview
+          smallTitle
+          className="col-span-4 lg:col-span-2"
+          url="/seventh-semester/s7_building_services.pdf"
+        />
+      </div>
+      <div className="col-span-4 lg:col-span-2 mb-6 lg:mb-2">
+        <Txt variant={TxtVariant.H2} className="mt-8">
+          Details
+        </Txt>
+        <PDFPreview
+          smallTitle
+          className="col-span-4 lg:col-span-2"
+          url="/seventh-semester/s7_details.pdf"
+        />
+      </div>
+      <div className="col-span-4 lg:col-span-2 mb-6 lg:mb-2">
+        <Txt variant={TxtVariant.H2} className="mt-12">
+          Plans and sections
+        </Txt>
+        <div className="col-span-4">
+          <PDFPreview
+            smallTitle
+            className="col-span-4 lg:col-span-2"
+            url="/seventh-semester/s7_plans_and_section.pdf"
+          />
+        </div>
+      </div>
+      <div className="col-span-4 lg:col-span-2 mb-6 lg:mb-2">
+        <Txt variant={TxtVariant.H2} className="mt-12">
+          Structural design
+        </Txt>
+        <PDFPreview
+          smallTitle
+          className="col-span-4 lg:col-span-2"
+          url="/seventh-semester/s7_structural_design.pdf"
+        />
       </div>
     </PageGrid>
   );
